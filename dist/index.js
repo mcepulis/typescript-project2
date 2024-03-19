@@ -42,5 +42,16 @@ const mix2 = [45518, 'asd', 5148, 'ewrgs', true, false];
 // const mix3: number[] | string[] = ['fds', 'wewr', 'der', 2514];
 const mix3 = [145, 4851, 4895];
 console.log(mix3);
-const str = 'Labas rytas'.split('').map(x => typeof x === 'number' ? x * 2 : x);
+const str = 'Labas rytas'.split('').map(x => x * 2);
 console.log(str);
+function suma(a, b) {
+    return a + b;
+}
+console.log(suma(7, 5));
+console.log(suma(7, 'asd'));
+console.log(suma('asd', 5));
+console.log(suma('asd', 'asd'));
+function random(a, b, c, d) {
+    return null;
+}
+console.log(random(1, 2, 3, 4));

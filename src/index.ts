@@ -60,3 +60,18 @@ console.log(mix3);
 
 const str = 'Labas rytas'.split('').map(x => x * 2);
 console.log(str);
+
+function suma(a: number, b: number) {
+    return a + b;
+}
+
+console.log(suma(7, 5));
+console.log(suma(7, 'asd'));
+console.log(suma('asd', 5));
+console.log(suma('asd', 'asd'));
+
+function random(a: number, b: string, c: boolean, d: number[]) {
+    return null;
+}
+
+console.log(random(1, 2, 3, 4));
