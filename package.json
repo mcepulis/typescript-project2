@@ -1,15 +1,17 @@
 {
-  "name": "48-grupe-ts",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Rimantas (https://github.com/belauzas)",
-  "license": "MIT",
-  "devDependencies": {
-    "typescript": "^5.4.2"
-  }
+    "name": "48-grupe-ts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "ts": "tsc --watch",
+        "dealer": "node --watch ./dist/auto/Dealer.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Rimantas (https://github.com/belauzas)",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.4.2"
+    }
 }
