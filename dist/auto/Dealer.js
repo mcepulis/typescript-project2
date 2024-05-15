@@ -5,10 +5,12 @@ class Dealer {
     name;
     currency;
     allCars;
+    soldCars;
     constructor(name, currency) {
         this.currency = currency;
         this.name = name;
         this.allCars = [];
+        this.soldCars = [];
         console.log(`Hi, my name is ${name}!`);
     }
     formatedPrice(price) {
@@ -23,6 +25,9 @@ class Dealer {
     }
     carList() {
         let result = [`${this.name}\'s car dealership:`];
+        if (this.allCars.length === 0) {
+            result.push('SORRY! No cars for sale :(');
+        }
         for (let i = 0; i < this.allCars.length; i++) {
             const car = this.allCars[i];
             const price = this.formatedPrice(car.price);
@@ -33,16 +38,28 @@ class Dealer {
         result.splice(1, 0, '='.repeat(count));
         return result.join('\r\n');
     }
-    changeCarPrice(id, newPrice) {
-        if (id < 1) {
-            return 'ERROR: id is too low.';
+    changeCarPrice(index, newPrice) {
+        if (index < 1) {
+            return 'ERROR: index is too low.';
         }
-        if (id > this.allCars.length) {
-            return 'ERROR: id is too big.';
+        if (index > this.allCars.length) {
+            return 'ERROR: index is too big.';
         }
-        const car = this.allCars[id - 1];
+        const car = this.allCars[index - 1];
         car.price = newPrice;
         return `New ${car.model} price is ${this.formatedPrice(newPrice)}.`;
+    }
+    sellCar(index) {
+        if (index < 1 || index > this.allCars.length) {
+            return 'SORRY! There is no such car for sale :(';
+        }
+        const car = this.allCars.splice(index - 1, 1);
+        this.soldCars.push(car[0]);
+        return `Wow! ${car[0].model} sold for ${this.formatedPrice(car[0].price)}!`;
+    }
+    fortune() {
+        const total = this.soldCars.reduce((t, c) => t + c.price, 0);
+        return `${this.name} has sold ${this.soldCars.length} cars for total of ${this.formatedPrice(total)}!`;
     }
 }
 exports.Dealer = Dealer;
