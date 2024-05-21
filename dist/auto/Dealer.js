@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Dealer = void 0;
-class Dealer {
+export class Dealer {
     name;
     currency;
     allCars;
@@ -62,4 +59,3 @@ class Dealer {
         return `${this.name} has sold ${this.soldCars.length} cars for total of ${this.formatedPrice(total)}!`;
     }
 }
-exports.Dealer = Dealer;
