@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const jonas = {
     name: 'Jonas',
     age: 99,
@@ -27,3 +25,4 @@ function studentMarksAverage(student) {
 }
 console.log(studentMarksAverage(jonas));
 console.log(studentMarksAverage(maryte));
+export {};

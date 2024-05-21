@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 console.log('Labas rytas, Lietuva!');
 let name = 'Jonas';
 console.log(name);
@@ -49,6 +47,7 @@ function suma(a, b) {
     return a + b;
 }
 console.log(suma(7, 5));
+export {};
 // console.log(suma(7, 'asd'));
 // console.log(suma('asd', 5));
 // console.log(suma('asd', 'asd'));
